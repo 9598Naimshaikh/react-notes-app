@@ -68,6 +68,12 @@ export default function App() {
 
               <button type="submit" className='bg-blue-500 px-4 py-2 rounded-xl w-full font-bold tracking-wide'>Add note</button>
             </form>
+
+            <div
+            onClick={() => {
+              setShow(!show);
+            }} 
+            className="absolute top-2 right-2 text-red-500 border border-red-500/20 rounded-full"><X className='w-8 h-8' /></div>
           </div>
         )}
 
@@ -80,7 +86,7 @@ export default function App() {
                 onClick={() => {
                   deleteHandler(index);
                 }}
-                className="text-red-500 bg-zinc-400/20 rounded-full font-bold absolute top-2 right-2">
+                className="text-red-500 border-2 border-red-500/20 rounded-full font-bold absolute top-2 right-2">
                   <X className='w-8 h-8'/>
                 </div>
             </div>
